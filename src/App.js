@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Card from './components/Card'
+const App = () => {
+  // se regresan elementos de JSX
+  const numero = 1
+  const componente = {
+    numero: numero
+  }
 
-function App() {
+  const listaAlumnosSimple = ["Maria","Estebam","daniel"]
+  const ListaJSX =[]
+ 
+  const listaAlumnos = [<p>Maria</p>,<p>Estebam</p>,<p>Daniel</p>]
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <p id='saludo'>Hola</p>
+      <Card titulo ={`La tarjeta numero ${numero}`} numero={numero}/>
+      <Card/>
+      <Card/>
+      <Card/>
+      <Card/>
+      {/* {listaAlumnos} */}
+      {listaAlumnosSimple.map((alumno, index)=><p key ={index}>{alumno}</p>)}
     </div>
-  );
-}
+  )
+
+};
 
 export default App;
