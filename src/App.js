@@ -1,28 +1,16 @@
 import React from 'react';
 import Card from './components/Card'
 const App = () => {
-  // se regresan elementos de JSX
-  const numero = 1
-  const componente = {
-    numero: numero
-  }
-
-  const listaAlumnosSimple = ["Maria","Estebam","daniel"]
-  const ListaJSX =[]
- 
-  const listaAlumnos = [<p>Maria</p>,<p>Estebam</p>,<p>Daniel</p>]
-  return (
-    <div>
-      <p id='saludo'>Hola</p>
-      <Card titulo ={`La tarjeta numero ${numero}`} numero={numero}/>
-      <Card/>
-      <Card/>
-      <Card/>
-      <Card/>
-      {/* {listaAlumnos} */}
-      {listaAlumnosSimple.map((alumno, index)=><p key ={index}>{alumno}</p>)}
-    </div>
-  )
+  const Alumnos=['Martha','cecilia','juan']
+  const numero = Alumnos.length
+  
+return (
+  <div>
+  <p>hola</p>
+      <Card title={`El numero de estudiantes es ${numero}`} numero ={numero}> </Card>
+  </div>
+)
+  
 
 };
 

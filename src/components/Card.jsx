@@ -1,11 +1,16 @@
-import React from 'react';
+import React,{useState} from 'react';
 const Card = (props) => {
-    console.log(props)
-    return <>
-
-        <h2> {props.titulo} </h2>
-        <p> Mi contenido {props.numero} </p>
-    </>;
+    let [cont,Setcont] = useState(0)
+    let aumenta=()=>{
+        return Setcont(cont + 1)
+    }
+    return (
+        <>
+        <p> {props.title}</p>
+        <p> {cont}</p>
+        <button onClick={aumenta}>Aumenta</button>
+        </>
+    )
 };
 
 export default Card;
