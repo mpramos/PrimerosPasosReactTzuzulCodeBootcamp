@@ -27,7 +27,12 @@ export default function GoApi() {
    }, [])
   return <div>
       {console.log(characters)}
-        {characters.map(character=> <Character key={character.id}personaje={character}></Character> )}
+        {characters.map(character=> <Character key={character.id} personaje={character}>
+            {/* {ejemplo de children } */}
+            <p>Contenido1</p>
+            <p>Contenido2</p>
+        </Character> )}
   </div>;
 }
 
+ 
